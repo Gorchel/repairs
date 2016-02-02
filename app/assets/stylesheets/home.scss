@@ -1,0 +1,99 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$textPink: #f7ede0;
+$textBrown: rgb(43, 23, 8);
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: $textPink;
+}
+
+nav {
+	background: rgba(43, 23, 8, 0.9) !important; 
+	a {
+		font-size: 18px !important;
+		height: 60px !important;
+		padding-top: 20px !important;
+		color: $textPink !important;
+	}
+}
+
+#startPage { 
+	background-image: image-url('startPage.jpg');
+	background-position: center;
+	background-repeat: none;
+	background-size: cover;
+	padding: 0px;
+
+	#startPageBackground {
+		text-align: center;
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: rgba(43, 23, 8, 0.5);
+
+		#startPageContent {
+			color: $textPink;
+			font-family: 'Poiret One', cursive;
+			height: 100%;
+			position: relative;
+			top: 0;
+			left: 0;
+
+			h1 {
+				font-size: 46px;
+				padding-top: 15%;
+			}
+
+			#moreBtn {
+				background: none;
+				border-color: $textPink;
+				color: $textPink;
+				font-size: 16px;
+				font-weight: 600;
+				margin-top: 10%;
+				padding: 12px;
+				border-radius: 10px;
+			}
+
+			#moreDown {
+				padding: 0px;
+				position: absolute;
+				bottom: 15px;
+				width: 100%;
+
+				a {
+					border: 1px solid $textPink;
+					padding: 3px 7px 1px 7px;
+					border-radius: 15px;
+					display: inline-block;
+					margin-right: 30px;
+
+					i {
+						color: $textPink;
+					}
+				}	
+			}	
+		}
+	}
+}
+
+.devider {
+	margin-top: 30px;
+
+	p {
+		border-top: 1px solid $textPink;
+		width: 25%;
+		display: inline-block;
+		margin: 2px 0px;
+	}
+
+	i {	
+		display: inline-block;
+		vertical-align: middle;
+		color: $textPink;
+		margin: 0px 10px;
+	}
+}
