@@ -10,6 +10,6 @@ $(document).on 'page:change', (event) ->
 		id = $(this).attr('href')
 		top = $(id).offset().top
 		top -= 60
-		$('body,html').animate { scrollTop: top }, 1000
+		$('body,html').animate { scrollTop: top }, 500
 		return
 	return

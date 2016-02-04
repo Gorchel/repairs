@@ -1,8 +1,14 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 $textPink: #f7ede0;
 $textBrown: rgb(43, 23, 8);
+$textBlue: #00A79D;
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -11,11 +17,20 @@ body {
 
 nav {
 	background: rgba(43, 23, 8, 0.9) !important; 
+	
+	.navbar-toggle {
+		margin-top: 15px;
+	}
+
 	a {
+		color: $textPink !important;
 		font-size: 18px !important;
 		height: 60px !important;
 		padding-top: 20px !important;
-		color: $textPink !important;
+	}
+	
+	#logo {
+		padding-top: 15px !important;
 	}
 }
 
@@ -81,10 +96,9 @@ nav {
 }
 
 .devider {
-	margin-top: 30px;
+	margin-top: 20px;
 
 	p {
-		border-top: 1px solid $textPink;
 		width: 25%;
 		display: inline-block;
 		margin: 2px 0px;
@@ -93,7 +107,28 @@ nav {
 	i {	
 		display: inline-block;
 		vertical-align: middle;
-		color: $textPink;
 		margin: 0px 10px;
 	}
+}
+
+.deviderPink {
+	p {
+		border-top: 1px solid $textPink;
+	}
+	i { 
+		color: $textPink;
+	}
+}
+
+.deviderYellow {
+	p {
+		border-top: 1px solid $textBlue;
+	}
+	i { 
+		color: $textBlue;
+	}
+}
+
+#aboutContainer {
+	padding-top: 40px;
 }
