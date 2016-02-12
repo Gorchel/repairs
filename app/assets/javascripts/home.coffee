@@ -3,7 +3,17 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on 'page:change', (event) ->
 	win_h = $(window).height()
-	$('#startPage').height win_h;
+	$('#startPage').height win_h
+	$('#advantages').height win_h - 60
+
+	#gallery
+	img_width = $('#gallery img:first-child').width()
+	$('#gallery img').height(img_width)
+
+	$('body').on 'click', '#gallery img', () ->
+		img_src = $(this).attr 'src'
+		$('#gallery-modal .modal-body img').attr src:img_src
+		$('#gallery-modal').modal('show')
 
 	$('body').on 'click', '.link', (event) ->
 		event.preventDefault()
@@ -13,3 +23,4 @@ $(document).on 'page:change', (event) ->
 		$('body,html').animate { scrollTop: top }, 500
 		return
 	return
+
